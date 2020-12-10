@@ -1,0 +1,69 @@
+/* reset */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Concert One', cursive;
+}
+
+/* body */
+body { 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(47,150,163), rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+}
+
+/* header */
+.header h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.location, 
+.temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    /* space-around는 flex요소들 사이, 앞, 뒤 모두 여유 공간을 두고 배치 */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.location .location-timezone {
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/* temperature */
+
+.temperature {
+    flex-direction: column;
+}
+.temperature .temperature-description {
+    font-size: 24px;
+}
+
+.temperature .degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.temperature .degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+.temperature .degree-section h2 {
+    font-size: 40px;
+}
+.temperature .degree-section .arrow {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.temperature .degree-section .arrow i {
+    margin-right: 7px;
+}
