@@ -1,0 +1,124 @@
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #111;
+    color: #999;
+}
+
+.wrapper {
+    display: flex;
+    /*컨텐츠 안에있는 team이 컨텐츠 크기만큼 확 줄어들음*/
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item {
+    flex-basis: 100px;
+    /*사이즈 조절*/
+    flex-shrink: 0;
+    /* hover 했을 때 사이즈가 줄어들지 않게 하기 위함*/
+    margin: 0 10px;
+    transition: all .4s;
+}
+
+.team-item:hover {
+    flex-basis: 150px;
+    margin: 0 20px;
+}
+
+.team-item img {
+    width: 100%;
+    /*사진의 원래 사이즈를 조절*/
+}
+
+.profile {
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile:before {
+    content: '';
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#f2000000', GradientType=0);
+    /* IE6-9 */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 240px;
+}
+
+.profile_blue {
+    color: #b0e4ff;
+}
+
+.profile_red {
+    color: #ff8686;
+}
+
+.profile_green {
+    color: #14cc14;
+}
+
+.profile_purple {
+    color: #a711a7
+}
+
+.profile_pink {
+    color: hotpink
+}
+
+.profile-contents {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.profile-contents h2 {
+    font-size: 20px;
+}
+
+.profile-contents h2 span {
+    display: block;
+    font-size: 12px;
+}
+
+.profile-contents p {
+    color: white;
+    font-size: 10px;
+    min-width: 140px;
+    max-height: 0;
+    /*처음에 p 태그 안보이게 하기 위함*/
+    overflow: hidden;
+    line-height: 1.2;
+    transition: all .2s;
+    transition-delay: .5s;
+    
+}
+
+.team-item:hover .profile-contents p {
+    max-height: 6em;
+    margin-top: 0.2em;
+}
