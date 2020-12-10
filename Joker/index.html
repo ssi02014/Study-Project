@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Joker</title>
+
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="로고"></a>
+        <div class="toggle"><img src="img/toggle.png" alt="토글"></div>
+    </header>
+    <!-- //헤더 -->
+
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p><em style="color: rgb(233, 66, 37)">Jeon MIn Jae</em> ipsum dolor sit amet consectetur adipisicing elit. 
+            Cupiditate doloribus qui saepe sunt architecto suscipit modi dolore officiis ex veritatis placeat accusamus quae eius perferendis
+            , autem quasi mollitia expedita numquam.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="img/play.png" alt="플레이">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="img/facebook.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="img/instagram.png" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="img/twitter.png" alt="트위터"></a></li>
+            </ul>
+            <!-- //슬라이드 -->
+        </div>
+        <!-- //컨텐츠 -->
+    </div>
+    <!-- //배너 -->
+    <div class="trailer">
+        <video src="video/trailer.mp4" controls="true"></video>
+        <img src="img/close.png" class="close" alt="닫기" onclick="toggle();">
+    </div>
+
+    <script type="text/javascript">
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
